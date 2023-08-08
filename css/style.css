@@ -1,0 +1,271 @@
+/*
+C O L O R E S
+Color1 rosa: #F189AA
+Color2 VERDE: #A1E5AB
+Color3 gris/marron: #463F3A
+Color4 naranja: #F0B67F
+Color5 celeste: #8ACAFF
+*/
+/* F O N T */
+@font-face {
+  font-family: "Roboto general";
+  src: url(../assets/Roboto-Light.ttf);
+}
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/* H E A D E R    B A R R A */
+.logo-header {
+  align-items: left;
+  justify-content: left;
+  height: 3em;
+  overflow: hidden;
+}
+
+.barraDeMenu {
+  background-color: #A1E5AB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+  /* fixed*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* z-index*/
+  z-index: 1;
+}
+
+.menuList {
+  color: #fff;
+  display: flex;
+  list-style: none;
+  width: 500px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menuList--li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menuList--li {
+  position: relative;
+}
+
+.logo-perfil {
+  align-items: right;
+  justify-content: right;
+  height: 3em;
+}
+
+
+/* H E A D E R    B A N N E R*/
+.hero {
+  background-color: beige;
+  background-image: url("../assets/sillon3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+
+.hero div {
+  text-align: left;
+  color: rgb(255, 0, 170);
+  padding-top: 100px;
+  padding-left: 50px;
+}
+.h1 {
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  }
+  
+
+.hero1 {
+  background-color: beige;
+  background-image: url("./assets/persona5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+
+.hero1 div {
+  text-align: left;
+  color: rgb(255, 0, 170);
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+/* M A I N    C U E R P O */
+.galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em 0 4em;
+}
+
+.galeria h3 {
+  font-size: 1.5em;
+}
+
+.galeria--cont {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.item-img {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  padding: 5px;
+  justify-items: center;
+  display: flex;
+}
+
+.item-img img {
+  width: 100%;
+}
+
+.galeria__button {
+  background-color: rgb(255, 0, 170);
+  color: #ffffff;
+  border: 1px solid rgb(255, 0, 170);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.galeria_producto {
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
+
+.galeria-nosotras {
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 35% 15% 35% 15%;
+  grid-template-areas: "parrafo img1 img2" "parrafo bot1 bot2" "parrafo img3 img4" "parrafo bot3 bot4";
+}
+
+.parrafo {
+  grid-area: parrafo;
+  height: 900px;
+}
+
+.item-img1 {
+  display: flex;
+  grid-area: img1;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  padding: 5px 5px 5px 5px;
+  justify-items: center;
+  align-items: center;
+}
+
+.galeria__button1 {
+  grid-area: bot1;
+  width: 150px;
+  padding: 5px 5px 5px 5px;
+  justify-items: center;
+  text-align: center;
+}
+
+.item-img2 {
+  display: flex;
+  grid-area: img2;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  padding: 5px 5px 5px 5px;
+  justify-items: center;
+  align-items: center;
+}
+
+.galeria__button2 {
+  grid-area: bot2;
+  width: 150px;
+  padding: 5px 5px 5px 5px;
+  justify-items: center;
+  text-align: center;
+}
+
+.item-img3 {
+  display: flex;
+  grid-area: img3;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  padding: 5px 5px 5px 5px;
+  justify-items: center;
+  align-items: center;
+}
+
+.galeria__button3 {
+  grid-area: bot3;
+  width: 150px;
+  padding: 5px 5px 5px 5px;
+  justify-items: center;
+  text-align: center;
+}
+
+.item-img4 {
+  display: flex;
+  grid-area: img4;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  padding: 5px 5px 5px 5px;
+  justify-items: center;
+  align-items: center;
+}
+
+.galeria__button4 {
+  grid-area: bot4;
+  width: 150px;
+  padding: 5px 5px 5px 5px;
+  justify-items: center;
+  text-align: center;
+}
+
+/*
+Si codeo de "desktop" a "mobile" tengo que usar "max-width"
+
+Si codeo de "mobile" a "desktop" tengo que usar "min-width"
+
+*/
+/* T A B L E T */
+@media (max-width: 768px) {
+  .galeria-nosotras {
+    display: grid;
+    flex-flow: wrap;
+    justify-content: center;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "parrafo parrafo" "img1 img2" "bot1 bot2" "img3 img4" "bot3 bot4";
+  }
+  .galeria__button {
+    background-color: #04cefc;
+    color: #ffffff;
+    border: 1px solid #000;
+    border-radius: 20px;
+    height: 50px;
+  }
+}
+/* M O B I L E */
+@media (max-width: 576px) {
+  .ggaleria__button {
+    background-color: red;
+  }
+}
+/* F O O T E R */
+footer {
+  background-color: #A1E5AB;
+  overflow: hidden;
+}
